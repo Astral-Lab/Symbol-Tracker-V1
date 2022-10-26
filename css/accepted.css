@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Roboto+Mono&family=Roboto+Slab&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 1rem; /** media queries for size*/
+    font-family: 'Amiri Quran', serif;
+    letter-spacing: .25rem;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+h1 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+main {
+    text-align: center;
+}
+
+figure {
+    margin: 3rem 0 3rem 0;
+}
+
+iframe {
+    width: 90vw;
+    height: 50vw;
+    border: none;
+}
+
+figcaption {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem;
+}
+
+.navigation {
+    display: grid;
+    place-content: center;
+    grid-template-areas: 
+        "back home";
+    margin-bottom: 5rem;
+    gap: 1.5rem;
+}
+
+.home-button {
+    display: grid;
+    grid-area: home;
+    place-content: center;
+    border-radius: 50vw;
+    background-color: #535353;
+    color: white;
+    font-weight: bold;
+    cursor: grab;
+    width: 40vw;
+    height: 15vw;
+}
+
+.back-button {
+    display: grid;
+    grid-area: back;
+    place-content: center;
+    border-radius: 50vw;
+    background-color: #65081f;
+    color: white;
+    font-weight: bold;
+    cursor: grab;
+    width: 40vw;
+    height: 15vw;
+}
+
+footer {
+    display: grid;
+    place-content: center;
+    border-top: 1px solid white;
+}
+
+.socials {
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 320px) {
+    body {
+        letter-spacing: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    h1 {
+        font-size: 2rem;
+    }
+    figcaption {
+        font-size: 1.25rem;
+    }
+    .back-button, .home-button {
+        width: 175px;
+        height: 56px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    figcaption {
+        font-size: 1.5rem;
+        padding: 3rem;
+       
+    }
+    .back-button, .home-button {
+        width: 250px;
+        height: 80px;
+        margin: 0 2rem 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    iframe {
+        width: 750px;
+        height: 500px
+    }
+    figcaption {
+        font-size: 2rem;
+        padding: 5rem;
+    }
+    .back-button, .home-button {
+        margin: 0 3rem 0 3rem;
+    }
+}

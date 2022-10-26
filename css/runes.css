@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Roboto+Mono&family=Roboto+Slab&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 1rem; /** media queries for size*/
+    font-family: 'Amiri Quran', serif;
+    letter-spacing: .5rem;
+}
+
+header {
+    display: grid;
+    place-content: center;
+    border-bottom: 1px solid white;
+}
+
+.rune-header {
+    margin: 1rem 0 2rem 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rune {
+    margin: 0 auto;
+    width: 20vw;
+    height: 20vw;
+}
+
+main {
+    text-align: center; /** why does this work and not place-content: center?*/
+}
+
+figure {
+    margin: 3rem 0 3rem 0;
+}
+
+iframe {
+    width: 90vw;
+    height: 50vw;
+    border: none;
+}
+
+figcaption {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem;
+}
+
+.navigation {
+    display: grid;
+    place-content: center;
+    grid-template-areas: 
+        "back next";
+    margin-bottom: 5rem;
+}
+
+.next-button {
+    display: grid;
+    place-content: center;
+    width: 40vw;
+    height: 15vw;
+    border-radius: 50vw;
+    font-weight: bold;
+    color: white;
+    background: #08654e;
+    margin: 0 1rem 0 1rem;
+    cursor: grab;
+}
+
+.back-button {
+    display: grid;
+    place-content: center;
+    margin-bottom: 5rem;
+    width: 40vw;
+    height: 15vw;
+    border-radius: 50vw;
+    font-weight: bold;
+    color: white;
+    background: #65081f;
+    margin: 0 1rem 0 1rem;
+    cursor: grab;
+}
+
+footer {
+    border-top: 1px solid white;
+    text-align: center;
+    font-size: 0.25rem;
+}
+
+footer > section {
+    margin: 1rem 0 1rem 0;
+}
+
+@media screen and (min-width: 425px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .rune {
+        width: 90px;
+        height: 90px;
+    }
+    figcaption {
+        font-size: 1.25rem;
+    }
+    .next-button, .back-button {
+        width: 175px;
+        height: 56px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    figcaption {
+        font-size: 1.5rem;
+        padding: 3rem;
+       
+    }
+    .next-button, .back-button {
+        width: 250px;
+        height: 80px;
+        margin: 0 2rem 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    iframe {
+        width: 750px;
+        height: 500px
+    }
+    figcaption {
+        font-size: 2rem;
+        padding: 5rem;
+    }
+    .next-button, .back-button {
+        margin: 0 3rem 0 3rem;
+    }
+}
